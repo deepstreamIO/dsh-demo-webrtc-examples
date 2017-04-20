@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font: 14px/16px Arial, sans-serif;
+	color: #333;
+}
+
+body{
+	background-color: #fafafa;
+}
+
+#wrapper{
+	width: 90%;
+	max-width: 800px;
+	margin: 20px auto;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.output li{
+	margin: 5px;
+	padding: 5px;
+}
