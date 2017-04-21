@@ -10,9 +10,12 @@ body{
 	background-color: #fafafa;
 }
 
-#wrapper{
+#wrapper,
+.wrapper{
 	width: 90%;
 	margin: 20px auto;
+	padding: 20px;
+	box-sizing: border-box;
 	background-color: #fff;
 	border: 1px solid #ccc;
 	overflow: hidden;
