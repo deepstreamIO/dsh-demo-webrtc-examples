@@ -16,9 +16,34 @@ body{
 	margin: 20px auto;
 	background-color: #fff;
 	border: 1px solid #ccc;
+	overflow: hidden;
+}
+
+.centered{
+	text-align: center;
 }
 
 .output li{
 	margin: 5px;
 	padding: 5px;
+}
+
+.video-wrapper{
+	width: 300px;
+	margin: 20px;
+	height: 225px;
+	background: #000;
+	position: relative;
+	display: inline-block;
+}
+
+.video-wrapper label{
+	position: absolute;
+	z-index: 1;
+	background: #fff;
+	color: #333;
+	border-top-left-radius: 6px;
+	bottom: 0;
+	right: 0;
+	padding: 2px 7px;
 }
