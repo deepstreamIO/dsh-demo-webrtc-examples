@@ -26,6 +26,7 @@ const ds = deepstream( 'wss://013.deepstreamhub.com?apiKey=d02f8752-7d26-4cf0-96
 	});
 
 	p2pConnection.on( 'signal', signal => {
+		signal.sdp = signal.sdp.replace( 'b=AS:30', 'b=AS:1638400' );
 		ds.event.emit( 'rtc-signal', {
 			sender: userName,
 			signal: signal
