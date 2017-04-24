@@ -4,7 +4,8 @@ const users = ds.record.getList( 'users' );
 const connections = {};
 const input = $('input');
 
-$('form').on('submit', () => {
+$('form').on('submit', ( e ) => {
+	e.preventDefault();
 	var val = input.val();
 	for( var username in connections ) {
 		connections[ username ].send( val );
