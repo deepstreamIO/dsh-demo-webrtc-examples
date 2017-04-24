@@ -8,7 +8,7 @@ navigator.getUserMedia(
 		init();
 	},
 	error => {
-		alert( 'error while accessing usermedia ' + error.toString() );
+		console.log( 'error while accessing usermedia', error.toString() );
 	}
 );
 
