@@ -1,6 +1,6 @@
 {
-    "name" : "Screen Capturing",
-    "author": "Muaz Khan",
+    "name" : "Forward Screen Id",
+    "author": "deepstreamHub GmbH",
     "version" : "3.4",
     "manifest_version" : 2,
     "minimum_chrome_version": "34",
