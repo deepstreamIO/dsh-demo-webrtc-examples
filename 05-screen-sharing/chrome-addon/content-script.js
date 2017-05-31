@@ -1,4 +1,4 @@
-// this content-script plays role of medium to publish/subscribe messages from webpage to the background script
+﻿// this content-script plays role of medium to publish/subscribe messages from webpage to the background script
 
 // this object is used to make sure our extension isn't conflicted with irrelevant messages!
 var rtcmulticonnectionMessages = {

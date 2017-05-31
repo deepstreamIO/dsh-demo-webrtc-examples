@@ -1,4 +1,4 @@
-// this background script is used to invoke desktopCapture API
+﻿// this background script is used to invoke desktopCapture API
 // to capture screen-MediaStream.
 
 var screenOptions = ['screen', 'window'];
