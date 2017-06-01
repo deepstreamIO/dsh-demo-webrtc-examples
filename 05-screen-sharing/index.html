@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>WebRTC Example 03 Audio Video</title>
+	<title>WebRTC Example 05 Screen Sharing</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="//code.deepstreamhub.com/js/latest/deepstream.js"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/simple-peer/8.1.0/simplepeer.min.js"></script>
@@ -9,24 +9,18 @@
 </head>
 <body>
 	<div id="wrapper" class="centered">
-		<div class="video-wrapper local">
-			<video autoplay width="300" height="225"></video>
-			<label>local video</label>
+		<div id="domain-warning" class="warning">
+			This example will only work on deepstreamhub.com unless you change the domain path in <a href="https://github.com/deepstreamIO/dsh-demo-webrtc-examples/blob/master/05-screen-sharing/chrome-addon/manifest.json">https://github.com/deepstreamIO/dsh-demo-webrtc-examples/blob/master/05-screen-sharing/chrome-addon/manifest.json</a>
 		</div>
-		<div class="video-wrapper input-canvas">
-			<canvas width="300" height="225"></canvas>
-			<label>input canvas</label>
+		<div id="addon-not-found" class="warning">
+			Chrome extension not found. Install it by following the steps in
+			<a href="https://deepstreamhub.com/tutorials/protocols/webrtc-screen-sharing/#install-addon">
+			https://deepstreamhub.com/tutorials/protocols/webrtc-screen-sharing/#install-addon</a>
 		</div>
-		<div class="video-wrapper output-canvas">
-			<canvas width="300" height="225"></canvas>
-			<label>output canvas</label>
-		</div>
-		<div class="video-wrapper remote">
-			<video autoplay width="300" height="225"></video>
-			<label>remote stream</label>
-		</div>
+		<button id="share-my-screen" disabled>share my screen<screen>
+		<video id="local" width="640" height="360" autoplay></video>
 	</div>
 
-	<script type="text/javascript" src="canvas-streams.js"></script>
+	<script type="text/javascript" src="screen-sharing.js"></script>
 </body>
 </html>

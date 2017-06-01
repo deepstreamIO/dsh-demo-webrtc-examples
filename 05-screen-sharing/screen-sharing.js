@@ -14,23 +14,33 @@ $(function(){
 		};
 		navigator.getUserMedia({video:constraints},
 			stream => {
-				var vid = $( '<video autoplay></video>')
-				vid.attr( 'src', URL.createObjectURL( stream ) );
-				$('body').append( vid );
-	
+				$('video#local').attr( 'src', URL.createObjectURL( stream ) );
 			},
 			error => {
 				console.log( error );
 			}
 		);
 	}
-	
 
 	window.addEventListener("message", function(msg){
-		if( msg.data && msg.data.sourceId ) {
+		if( !msg.data ) {
+			return;
+		} else if ( msg.data.sourceId ) {
 			getScreen( msg.data.sourceId );
+		} else if( msg.data.addonInstalled ) {
+			$( '#addon-not-found' ).hide();
+			$( '#share-my-screen' ).removeAttr( 'disabled' );
 		}
 	}, false);
 
-	window.postMessage('requestScreenSourceId', '*' )
-}); 
+	if( document.location.host !== 'deepstreamhub.com' ) {
+		$( '#domain-warning' ).show();
+	} else {
+		$( '#domain-warning' ).hide();
+		window.postMessage( 'check-addon-installed', '*' )
+	}
+
+	$( '#share-my-screen' ).click(function(){
+		window.postMessage('requestScreenSourceId', '*' );
+	})
+});

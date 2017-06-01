@@ -49,3 +49,17 @@ body{
 	right: 0;
 	padding: 2px 7px;
 }
+
+.warning{
+	background: #ffdede;
+	border: 1px solid #820808;
+	color: #820808;
+	font-weight: bold;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+button{
+	padding: 10px;
+	cursor: pointer;
+}
