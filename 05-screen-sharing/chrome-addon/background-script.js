@@ -12,8 +12,8 @@
             return;
         }
         chrome.desktopCapture.chooseDesktopMedia(
-            ['screen', 'window'], 
-            port.sender.tab, 
+            ['screen', 'window'],
+            port.sender.tab,
             onResponse
         );
     }
