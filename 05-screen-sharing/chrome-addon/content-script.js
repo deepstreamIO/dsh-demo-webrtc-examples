@@ -3,10 +3,7 @@
 port.onMessage.addListener(function (message) {
     window.postMessage(message, '*');
 });
-console.log( 'I am here');
-setInterval(function(){
-    window.postMessage( 'bla-blub', '*' )
-}, 500 );
+
 window.addEventListener('message', function (event) {
     if( event.data === 'check-addon-installed' ) {
         window.postMessage( 'addon-installed', '*' );
